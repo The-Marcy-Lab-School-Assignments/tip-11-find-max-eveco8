@@ -9,8 +9,26 @@
  */
 
 const findMax = (numbers) => {
- //write your code here
-};
+    //write your code here
+    let arr = []
+    let maxNum = numbers[0]
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] > maxNum) {
+            maxNum = numbers[i]
+
+        }
+
+    };
+
+    arr.push(maxNum)
+    arr.push(numbers.indexOf(maxNum))
+    return arr
+    //return max and index in arry 
+}
+
+console.log(findMax([1, 2, 3, 5, 4]))
+
+
 
 // Export the function for testing
 module.exports = { findMax };
